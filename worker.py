@@ -15,4 +15,5 @@ app = Celery(
         "data_folder_out": path,
     },
     imports=("tasks",),
+    broker_connection_retry_on_startup=True,
 )
